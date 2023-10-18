@@ -1,0 +1,5 @@
+# [install]
+# registry = { token = "$NPM_TOKEN",url = "https://registry.npmjs.org" }
+
+# [install.scopes]
+# example = { token = "$GIT_TOKEN", url = "https://npm.pkg.github.com" }

@@ -1,0 +1,58 @@
+{
+  "name": "@whatskit/shell-exec",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "A tiny cross-platform promise based wrapper around child_process.spawn.",
+  "author": "Billgo <hi@billgo.me>",
+  "bugs": "https://github.com/whatskit/shell-exec/issues",
+  "repository": "git@github.com:whatskit/shell-exec",
+  "prettier": "prettier-config-whatskit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "bun"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "build": "bun run bun.build.mjs",
+    "prepublishOnly": "bun run build",
+    "publish": "npm run publish"
+  },
+  "devDependencies": {
+    "bun-plugin-dts": "^0.2.1",
+    "bun-types": "^1.0.6",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.3",
+    "prettier-config-whatskit": "^0.4.0",
+    "typescript": "^5.2.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": false,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "plugin:prettier/recommended"
+    ]
+  },
+  "eslintIgnore": [
+    "*.mjs",
+    "lib/*",
+    "dist/*",
+    "build/*",
+    "coverage/*",
+    "fixtures/*",
+    "umd/*"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}
